@@ -1,0 +1,13 @@
+ version: '3.4'
+
+ services:
+   api:
+     build: 
+        context: .
+        target: builder
+     command: "make run"
+     volumes:
+      - "./:/go/src/github.com/4geeks/pex-awardwallet"
+     ports:
+      - "8080:8080"
+
