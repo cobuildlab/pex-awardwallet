@@ -40,11 +40,18 @@ func GetAwardWalletConnectionLink(c *gin.Context) {
 	)
 
 	platform, _ := c.GetQuery("platform")
+	state, _ := c.GetQuery("state")
+	granularSharingValue, _ := c.GetQuery("granularSharing")
+	granularSharing, _ := strconv.ParseBool(granularSharingValue)
+
 	accessValue, _ := c.GetQuery("access")
 	access, _ := strconv.Atoi(accessValue)
+
 	bodyMap := map[string]interface{}{
-		"platform": platform,
-		"access":   access,
+		"platform":        platform,
+		"access":          access,
+		"state":           state,
+		"granularSharing": granularSharing,
 	}
 
 	body, err := json.Marshal(bodyMap)

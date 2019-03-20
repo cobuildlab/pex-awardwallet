@@ -35,6 +35,10 @@
 
 **access** : _[required] Access._ Type: integer ; Default value: 0
 
+**state** : _[required] State._ Type: string ; Default value: ""
+
+**granularSharing** : _[required] Granular Sharing._ Type: bool ; Default value: false
+
 ### Example Body Response
 
 ```json
