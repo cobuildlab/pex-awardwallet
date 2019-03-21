@@ -40,7 +40,7 @@ type Account struct {
 	EditURL            string       `json:"editUrl,omitempty"`
 	History            []History    `json:"history,omitempty"`
 	Balance            string       `json:"balance"`
-	BalanceRaw         int          `json:"balanceRaw"`
+	BalanceRaw         float64      `json:"balanceRaw"`
 	Owner              string       `json:"owner,omitempty"`
 	ErrorCode          int          `json:"errorCode,omitempty"`
 	LastDetectedChange string       `json:"lastDetectedChange,omitempty"`
@@ -63,7 +63,7 @@ type SubAccount struct {
 	EditURL            string      `json:"editUrl,omitempty"`
 	History            []History   `json:"history,omitempty"`
 	Balance            string      `json:"balance"`
-	BalanceRaw         int         `json:"balanceRaw"`
+	BalanceRaw         float64     `json:"balanceRaw"`
 	Owner              string      `json:"owner,omitempty"`
 	ErrorCode          int         `json:"errorCode,omitempty"`
 	LastDetectedChange string      `json:"lastDetectedChange,omitempty"`
