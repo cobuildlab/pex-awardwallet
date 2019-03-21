@@ -30,7 +30,30 @@ type ResponseConnectedUser struct {
 
 //Account ...
 type Account struct {
-	AccountID          int         `json:"accountId,omitempty"`
+	AccountID          int          `json:"accountId,omitempty"`
+	Code               string       `json:"code,omitempty"`
+	DisplayName        string       `json:"displayName,omitempty"`
+	Kind               string       `json:"kind,omitempty"`
+	Login              string       `json:"login,omitempty"`
+	AutoLoginURL       string       `json:"autologinUrl,omitempty"`
+	UpdateURL          string       `json:"updateUrl,omitempty"`
+	EditURL            string       `json:"editUrl,omitempty"`
+	History            []History    `json:"history,omitempty"`
+	Balance            string       `json:"balance"`
+	BalanceRaw         int          `json:"balanceRaw"`
+	Owner              string       `json:"owner,omitempty"`
+	ErrorCode          int          `json:"errorCode,omitempty"`
+	LastDetectedChange string       `json:"lastDetectedChange,omitempty"`
+	ExpirationDate     string       `json:"expirationDate,omitempty"`
+	LastRetrieveDate   string       `json:"lastRetrieveDate,omitempty"`
+	LastChangeDate     string       `json:"lastChangeDate,omitempty"`
+	Properties         []Propertie  `json:"properties,omitempty"`
+	SubAccounts        []SubAccount `json:"subAccounts,omitempty"`
+}
+
+//SubAccount ...
+type SubAccount struct {
+	SubAccountID       int         `json:"subAccountId,omitempty"`
 	Code               string      `json:"code,omitempty"`
 	DisplayName        string      `json:"displayName,omitempty"`
 	Kind               string      `json:"kind,omitempty"`
