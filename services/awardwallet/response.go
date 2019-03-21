@@ -10,10 +10,22 @@ type ResponseConnectionLink struct {
 	URL string `json:"url"`
 }
 
-//ResponseDetailAccount Respuesta exitosa
-type ResponseDetailAccount struct {
-	Account       Account       `json:"account"`
-	ConnectedUser ConnectedUser `json:"connectedUser"`
+//ResponseConnectedUser ...
+type ResponseConnectedUser struct {
+	UserID                  int       `json:"userId,omitempty"`
+	Fullname                string    `json:"fullName,omitempty"`
+	Status                  string    `json:"status,omitempty"`
+	Username                string    `json:"userName,omitempty"`
+	Email                   string    `json:"email,omitempty"`
+	ForwardingEmail         string    `json:"forwardingEmail,omitempty"`
+	AccessLevel             string    `json:"accessLevel,omitempty"`
+	ConnectionType          string    `json:"connectionType,omitempty"`
+	AccountsAccessLevel     string    `json:"accountsAccessLevel,omitempty"`
+	AccountsSharedByDefault bool      `json:"accountsSharedByDefault,omitempty"`
+	EditConnectionURL       string    `json:"editConnectionUrl,omitempty"`
+	AccountListURL          string    `json:"accountListUrl,omitempty"`
+	TimelineURL             string    `json:"timelineUrl,omitempty"`
+	Accounts                []Account `json:"accounts,omitempty"`
 }
 
 //Account ...
@@ -58,26 +70,14 @@ type Field struct {
 	Value Value  `json:"value,omitempty"`
 }
 
-//ConnectedUser ...
-type ConnectedUser struct {
-	UserID                  int    `json:"userId,omitempty"`
-	Fullname                string `json:"fullName,omitempty"`
-	Status                  string `json:"status,omitempty"`
-	Username                string `json:"userName,omitempty"`
-	Email                   string `json:"email,omitempty"`
-	ForwardingEmail         string `json:"forwardingEmail,omitempty"`
-	AccessLevel             string `json:"accessLevel,omitempty"`
-	ConnectionType          string `json:"connectionType,omitempty"`
-	AccountsAccessLevel     string `json:"accountsAccessLevel,omitempty"`
-	AccountsSharedByDefault bool   `json:"accountsSharedByDefault,omitempty"`
-	EditConnectionURL       string `json:"editConnectionUrl,omitempty"`
-	AccountListURL          string `json:"accountListUrl,omitempty"`
-	TimelineURL             string `json:"timelineUrl,omitempty"`
-	BookingRequestsURL      string `json:"bookingRequestsUrl,omitempty"`
-}
-
 //Value ...
 type Value struct {
 	Value string `json:"value,omitempty"`
 	Type  string `json:"type,omitempty"`
 }
+
+////ResponseDetailAccount Respuesta exitosa
+//type ResponseDetailAccount struct {
+//	Account       Account       `json:"account"`
+//	ConnectedUser ConnectedUser `json:"connectedUser"`
+//}

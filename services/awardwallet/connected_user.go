@@ -7,7 +7,7 @@ import (
 )
 
 //ConnectedUser Obtiene la informacion de la cuenta
-func (c Client) ConnectedUser(userID string) (awardResponse *ResponseDetailAccount, awardErr *Error, err error) {
+func (c Client) ConnectedUser(userID string) (awardResponse *ResponseConnectedUser, awardErr *Error, err error) {
 	req, err := http.NewRequest("GET", "https://business.awardwallet.com/api/export/v1/connectedUser/"+userID, nil)
 	if err != nil {
 		return
