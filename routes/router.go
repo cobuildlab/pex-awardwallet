@@ -40,8 +40,8 @@ func SetupRouter() *gin.Engine {
 		//AwardWallet Endpoints
 		award := v1.Group("/award")
 		{
-			award.GET("/account", handlers.GetAwardWalletAccount)
-			award.GET("/connection", handlers.GetAwardWalletConnectionLink)
+			award.GET("/account", handlers.GetConnectedUser)
+			award.GET("/connection", handlers.GetConnectionLink)
 		}
 	}
 

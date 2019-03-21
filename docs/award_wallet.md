@@ -25,10 +25,6 @@
 ## Get connection link
 `GET /api/v1/award/connection`
 
-### Examples
-
-`GET /api/v1/award/connection`
-
 ### Parameters
 
 **platform** : _[required] Platform._ Type: string ; Default value: ""
@@ -38,6 +34,10 @@
 **state** : _[required] State._ Type: string ; Default value: ""
 
 **granularSharing** : _[required] Granular Sharing._ Type: bool ; Default value: false
+
+### Examples
+
+`GET /api/v1/award/connection?platform=mobile&access=1&state=xyz&granularSharing=true`
 
 ### Example Body Response
 
@@ -49,3 +49,16 @@
     },
 }
 ```
+
+---
+
+## Get data account
+`GET /api/v1/award/account`
+
+### Parameters
+
+**userID** : _[required] User ID._ Type: string ; Default value: ""
+
+### Examples
+
+`GET /api/v1/award/account?userID=57342`
