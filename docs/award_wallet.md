@@ -57,7 +57,7 @@
 
 ### Parameters
 
-**userID** : _[required] User ID._ Type: string ; Default value: ""
+**userID** : _[required] User ID._ Type: integer ; Default value: 0
 
 ### Examples
 
