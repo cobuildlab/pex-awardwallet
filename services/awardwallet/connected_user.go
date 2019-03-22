@@ -4,11 +4,12 @@ import (
 	"encoding/json"
 	"io/ioutil"
 	"net/http"
+	"strconv"
 )
 
 //ConnectedUser Obtiene la informacion de la cuenta
-func (c Client) ConnectedUser(userID string) (awardResponse *ResponseConnectedUser, awardErr *Error, err error) {
-	req, err := http.NewRequest("GET", "https://business.awardwallet.com/api/export/v1/connectedUser/"+userID, nil)
+func (c Client) ConnectedUser(userID int) (awardResponse *ResponseConnectedUser, awardErr *Error, err error) {
+	req, err := http.NewRequest("GET", "https://business.awardwallet.com/api/export/v1/connectedUser/"+strconv.Itoa(userID), nil)
 	if err != nil {
 		return
 	}
