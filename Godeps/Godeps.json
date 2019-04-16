@@ -1,6 +1,6 @@
 {
-	"ImportPath": "github.com/4geeks/pex-awardwallet",
-	"GoVersion": "go1.12",
+	"ImportPath": "github.com/cobuildlab/pex-awardwallet",
+	"GoVersion": "go1.10",
 	"GodepVersion": "v80",
 	"Deps": [
 		{
