@@ -5,7 +5,7 @@ import (
 	"os"
 	"strconv"
 
-	"github.com/4geeks/pex-awardwallet/services/awardwallet"
+	"github.com/cobuildlab/pex-awardwallet/services/awardwallet"
 	"github.com/gin-gonic/gin"
 )
 
