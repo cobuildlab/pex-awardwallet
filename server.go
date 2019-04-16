@@ -5,7 +5,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/4geeks/pex-awardwallet/routes"
+	"github.com/cobuildlab/pex-awardwallet/routes"
 	"github.com/joho/godotenv"
 )
 

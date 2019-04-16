@@ -4,7 +4,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/4geeks/pex-awardwallet/handlers"
+	"github.com/cobuildlab/pex-awardwallet/handlers"
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 )
