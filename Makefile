@@ -13,7 +13,7 @@ build: prepare clean
 install: prepare clean
 	CGO_ENABLED=0 GOOS=linux go install -a -installsuffix cgo
 
-run:
+run: prepare
 	go run server.go
 
 .PHONY: install prepare build clean run
