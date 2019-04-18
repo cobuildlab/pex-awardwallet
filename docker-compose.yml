@@ -10,4 +10,6 @@
       - "./:/go/src/github.com/4geeks/pex-awardwallet"
      ports:
       - "8080:8080"
+     restart_policy:
+        condition: on-failure
 
