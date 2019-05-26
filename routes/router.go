@@ -41,6 +41,7 @@ func SetupRouter() *gin.Engine {
 		award := v1.Group("/award")
 		{
 			award.GET("/account", handlers.GetConnectedUser)
+			award.GET("/users", handlers.GetConnectedUsers)
 			award.GET("/connection", handlers.GetConnectionLink)
 		}
 	}
