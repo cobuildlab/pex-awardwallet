@@ -1,4 +1,4 @@
- version: '3.4'
+ version: '3.7'
 
  services:
    api:
@@ -10,4 +10,7 @@
       - "./:/go/src/github.com/4geeks/pex-awardwallet"
      ports:
       - "8080:8080"
+     deploy:
+        restart_policy:
+            condition: on-failure:5
 
