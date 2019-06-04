@@ -2,7 +2,6 @@ package awardwallet
 
 import (
 	"encoding/json"
-	"fmt"
 	"io/ioutil"
 	"net/http"
 	"strconv"
@@ -25,17 +24,13 @@ func (c Client) ConnectedUser(userID int) (awardResponse *ResponseConnectedUser,
 	defer resp.Body.Close()
 
 	body, err := ioutil.ReadAll(resp.Body)
-	fmt.Println("BODY -", string(body))
 	if resp.StatusCode >= http.StatusBadRequest && resp.StatusCode <= 599 {
 		err = json.Unmarshal(body, &awardErr)
 
-		fmt.Println("Problem1", err)
 		return
 	}
-	fmt.Println("Problem2", err)
 
 	err = json.Unmarshal(body, &awardResponse)
-	fmt.Println("Problem3", err)
 
 	return
 }
