@@ -35,6 +35,7 @@ func (c Client) ConnectedUser(userID int) (awardResponse *ResponseConnectedUser,
 	fmt.Println("Problem2", err)
 
 	err = json.Unmarshal(body, &awardResponse)
+	fmt.Println("Problem3", err)
 
 	return
 }
