@@ -29,8 +29,10 @@ func (c Client) ConnectedUser(userID int) (awardResponse *ResponseConnectedUser,
 	if resp.StatusCode >= http.StatusBadRequest && resp.StatusCode <= 599 {
 		err = json.Unmarshal(body, &awardErr)
 
+		fmt.Println("Problem1", err)
 		return
 	}
+	fmt.Println("Problem2", err)
 
 	err = json.Unmarshal(body, &awardResponse)
 
