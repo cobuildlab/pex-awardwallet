@@ -42,6 +42,7 @@ func SetupRouter() *gin.Engine {
 		{
 			award.GET("/account", handlers.GetConnectedUser)
 			award.GET("/users", handlers.GetConnectedUsers)
+			award.GET("/transaction-history", handlers.GetTransactionHistory)
 			award.GET("/connection", handlers.GetConnectionLink)
 		}
 	}
